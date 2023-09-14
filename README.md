@@ -35,3 +35,12 @@ Right click on the field name either on the graph or in Rows, click Show Filter,
 For Graduation Year, make sure to right click on it and set it to Discrete first(for both the Detail and when adding to the Rows), then click Show Filter
 
 Extra stuff: changing bar graph colors -> right click on the Former School Type filter (on the side) and click Edit colors
+
+Former School Type command: 
+IF [Former School Type] == 'Private' OR [Former School Type] == 'Private (Catholic)' OR [Former School Type] == 'Private/Non-Catholic'
+
+THEN 'Non-Public (Catholic)'
+
+ELSE [Former School Type]
+
+END
